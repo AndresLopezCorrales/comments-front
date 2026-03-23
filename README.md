@@ -1,4 +1,4 @@
-# Task Manager
+# WALL APP
 
 Interfaz web para consumir la WALLAPP API para poder iniciar sesión y subir comentarios a internet. Construida con HTML, Tailwind CSS v3 y JavaScript modular (ES Modules).
 
