@@ -1,5 +1,7 @@
 
-const API_BASE = 'http://localhost:3001';
+//const API_BASE = 'http://localhost:3001';
+
+const API_BASE = 'https://comments-back-production.up.railway.app';
 
 // Estado de sesión compartido entre módulos
 const state = {

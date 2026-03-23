@@ -25,7 +25,7 @@ const ui = {
     document.getElementById('commentsList').innerHTML = `
       <div class="text-center py-16">
         <p class="font-mono text-red text-sm">⚠ No se pudo conectar al servidor</p>
-        <p class="font-mono text-ash/60 text-xs mt-2">¿Está corriendo en localhost:3002?</p>
+        <p class="font-mono text-ash/60 text-xs mt-2">Ha habido un problema al intentar conectarse al servidor. Por favor, inténtalo de nuevo más tarde.</p>
         <button onclick="loadComments()"
           class="mt-4 font-mono text-xs text-purple-500 hover:underline tracking-widest uppercase">
           Reintentar
