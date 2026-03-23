@@ -15,7 +15,7 @@ Interfaz web para consumir la WALLAPP API para poder iniciar sesión y subir com
 ## Tecnologías
 
 - HTML5
-- Tailwind CSS v3 (compilado con CLI)
+- Tailwind CSS v4.1 (compilado con CLI)
 - JavaScript ES Modules (sin bundler)
 
 ## Requisitos
