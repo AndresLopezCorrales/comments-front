@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@source "../src/js/*.js";
+@source "./index.html";
+/* ── Fuentes custom ── */
+@theme {
+  --font-display: "Barlow Condensed", sans-serif;
+  --font-mono:    "Inconsolata", monospace;
+  --font-body:    "Lora", serif;
+
+  /* ── Colores ── */
+  --color-ink:   #0f0f0d;
+  --color-paper: #f5f0e8;
+  --color-smoke: #2a2a26;
+  --color-ash:   #5a5a52;
+  --color-amber: #d4820a;
+  --color-red:   #c0392b;
+  --color-chalk: #fafaf5;
+
+  /* ── Keyframes ── */
+  --animate-slide-in: slideIn 0.35s ease forwards;
+  --animate-fade-in:  fadeIn 0.4s ease forwards;
+  --animate-modal-in: modalIn 0.25s ease forwards;
+  --animate-ticker:   ticker 22s linear infinite;
+
+  @keyframes slideIn {
+    0%   { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @keyframes modalIn {
+    0%   { opacity: 0; transform: scale(0.95); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+  @keyframes ticker {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+}
+
+/* ── Estilos base ── */
+body { background-color: #0f0f0d; }
+
+.ticker-wrap  { overflow: hidden; white-space: nowrap; }
+.ticker-inner { display: inline-block; animation: ticker 22s linear infinite; }
+
+body::before {
+  content: '';
+  position: fixed; inset: 0; pointer-events: none; z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.3;
+}
+
+::-webkit-scrollbar       { width: 4px; }
+::-webkit-scrollbar-track { background: #1a1a16; }
+::-webkit-scrollbar-thumb { background: #5a5a52; border-radius: 2px; }
+
+.comment-card { border-left: 3px solid transparent; transition: border-color 0.2s; }
+.comment-card:hover { border-left-color: purple; }
+
+textarea { resize: vertical; min-height: 90px; }
+input:focus, textarea:focus { outline: none; }
+
+.stamp {
+  display: inline-block;
+  border: 2px solid currentColor;
+  padding: 1px 6px;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transform: rotate(-1.5deg);
+}
+
+.compose-disabled { pointer-events: none; user-select: none; }
+.compose-disabled input,
+.compose-disabled textarea,
+.compose-disabled button { opacity: 0.35;}
