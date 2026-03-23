@@ -8,7 +8,7 @@ Interfaz web para consumir la WALLAPP API para poder iniciar sesión y subir com
 
 ## Screenshots
 
-<img src="./src/img/no_auth" width="800"/>
+<img src="./src/img/no_auth.png" width="800"/>
 <img src="./src/img/register.png" width="800"/>
 <img src="./src/img/auth.png" width="800"/>
 
